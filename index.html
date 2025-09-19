@@ -14,11 +14,12 @@
 <body>
 	<header class="site-header">
 		<div class="container header-inner">
-			<div class="brand">
-				<h1 class="title">Space Robotics and Systems</h1>
-				<p class="subtitle">ICRA 2026</p>
-			</div>
-			<nav class="nav">
+			<nav class="nav" id="nav">
+				<div class="nav-toggle" id="nav-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 				<a href="#intro">Introduction</a>
 				<a href="#speakers">Speakers</a>
 				<a href="#schedule">Schedule</a>
@@ -34,8 +35,7 @@
 
 	<section class="hero">
 		<div class="container">
-			<h2>1st Workshop on Space Robotics and Systems</h2>
-			<h3>Off-world Autonomy and Intelligent Systems</h3>
+			<h2>Workshop on Intelligent Space Robotics and Systems</h2>
 			<p class="hero-meta">ICRA 2026 Workshop • Date: May XX, 2026 • Location: TBD</p>
 			<p class="hero-note">Poster Stands: TBD • Session Room: TBD</p>
 			<div class="hero-cta">
@@ -65,22 +65,22 @@
 				<ul class="card-grid">
 					<li class="card person">
 						<img src="images/speakers/carlos-perez-del-pulgar.jpg" alt="Carlos Pérez del Pulgar" onerror="this.style.display=none">
-						<h4>Carlos Pérez del Pulgar</h4>
+						<h4><a href="https://www.linkedin.com/in/carlosperezpulgar/" target="_blank">Carlos Pérez del Pulgar</a></h4>
 						<p>University of Málaga</p>
 					</li>
 					<li class="card person">
-						<img src="images/speakers/dongheui-lee.jpg" alt="Dongheui Lee" onerror="this.style.display=none">
-						<h4>Dongheui Lee</h4>
+						<img src="images/speakers/christian-ott.jpg" alt="Christian Ott" onerror="this.style.display=none">
+						<h4><a href="https://www.acin.tuwien.ac.at/en/" target="_blank">Christian Ott</a></h4>
 						<p>TU Wein</p>
 					</li>
 					<li class="card person">
 						<img src="images/speakers/kuldeep-barad.jpg" alt="Kuldeep Barad" onerror="this.style.display=none">
-						<h4>Kuldeep Barad</h4>
+						<h4><a href=https://www.linkedin.com/in/kuldeepbarad/" target="_blank">Kuldeep Barad</a></h4>
 						<p>Redwire Space - Luxembourg</p>
 					</li>
 					<li class="card person">
 						<img src="images/speakers/giusy-falcone.jpg" alt="Giusy Falcone" onerror="this.style.display=none">
-						<h4>Giusy Falcone</h4>
+						<h4><a href="https://www.linkedin.com/in/giusyfalcone/" target="_blank"></a>Giusy Falcone</a></h4>
 						<p>University of Michigan</p>
 					</li>
 					<li class="card person">
@@ -181,13 +181,13 @@
 					</li>
 					<li class="card person">
 						<img src="images/organizers/carol-martinez.jpg" alt="Carol Martinez" onerror="this.style.display='none'">
-						<h4>Carol Martinez</h4>
+						<h4><a href="https://carolmartinez.github.io/" target="_blank">Carol Martinez</a></h4>
 						<p>University of Luxembourg</p>
 					</li>
 					<li class="card person">
-						<img src="images/organizers/organizer6.jpg" alt="Organizer 6" onerror="this.style.display='none'">
-						<h4>Organizer 6</h4>
-						<p>Affiliation</p>
+						<img src="images/organizers/keenan-albee.jpg" alt="Keenan Albee" onerror="this.style.display='none'">
+						<h4><a href="https://albee.github.io/" target="_blank">Keenan Albee</a></h4>
+						<p>University of Southern California</p>
 					</li>
 				</ul>
 			</div>
@@ -245,7 +245,7 @@
 		<section id="support" class="section">
 			<div class="container">
 				<h3>Organizational Support Committee</h3>
-				<p>Thank you to our organizational support committee Abhishek Cauligi and Keenan Albee for helping publicize and source high-quality reviews.</p>
+				<p>Thank you to our organizational support committee Abhishek Cauligi for helping publicize and source high-quality reviews.</p>
 			</div>
 		</section>
 
@@ -264,5 +264,25 @@
 			<p class="small">Part of a Space Robotics Workshop series.</p>
 		</div>
 	</footer>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const navToggle = document.getElementById("nav-toggle");
+			const nav = document.getElementById("nav");
+
+			navToggle.addEventListener("click", function() {
+				navToggle.classList.toggle("active");
+				nav.classList.toggle("active");
+			});
+
+			// Close mobile nav when clicking on a link
+			const navLinks = nav.querySelectorAll("a");
+			navLinks.forEach(link => {
+				link.addEventListener("click", function() {
+					navToggle.classList.remove("active");
+					nav.classList.remove("active");
+				});
+			});
+		});
+	</script>
 </body>
 </html>
