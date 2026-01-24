@@ -74,9 +74,16 @@ img {
 
 /* Hero */
 .hero {
-	padding: 64px 0 40px;
+	padding: 48px 0 40px;
 	background: linear-gradient(180deg, var(--panel), var(--bg));
 	border-bottom: 1px solid var(--line);
+}
+
+.hero-logo {
+	width: 280px;
+	height: auto;
+	margin: 0 0 20px;
+	display: block;
 }
 
 .hero h2 {
