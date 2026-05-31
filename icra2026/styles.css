@@ -310,6 +310,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+strong {
+	font-weight: 700;
+}
+
 /* Mobile Navigation */
 .nav-toggle {
 	display: none;
